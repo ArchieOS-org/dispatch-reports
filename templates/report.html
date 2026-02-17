@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Report — {{APP_NAME}} — {{DATE}}</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-title">
+        <span class="logo-icon">🧪</span>
+        <a href="../">Dispatch QA Reports</a>
+      </div>
+      <nav class="site-nav">
+        <a href="../">← All Reports</a>
+        <a href="https://github.com/ArchieOS-org/dispatch-reports" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container container--narrow">
+
+    <!-- ═══════════════════════════════════════
+         REPORT HEADER
+         ═══════════════════════════════════════ -->
+    <div class="report-header">
+      <h1>{{APP_NAME}} — {{TEST_TYPE}} <span class="badge badge--in-progress">{{STATUS}}</span></h1>
+      <div class="report-meta">
+        <div class="meta-item">
+          <dt>Date:</dt>
+          <dd data-timestamp="{{ISO_DATE}}">{{DISPLAY_DATE}}</dd>
+        </div>
+        <div class="meta-item">
+          <dt>Device:</dt>
+          <dd>{{DEVICE}}</dd>
+        </div>
+        <div class="meta-item">
+          <dt>Branch:</dt>
+          <dd><code>{{BRANCH}}</code></dd>
+        </div>
+        <div class="meta-item">
+          <dt>Commit:</dt>
+          <dd><code>{{COMMIT}}</code></dd>
+        </div>
+        <div class="meta-item">
+          <dt>Tester:</dt>
+          <dd>{{TESTER}}</dd>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+      <button id="expand-all" class="badge badge--low" style="cursor:pointer; font-size: 0.8125rem; padding: 4px 12px; border: 1px solid var(--border); background: var(--surface);">Expand All</button>
+      <button id="collapse-all" class="badge badge--low" style="cursor:pointer; font-size: 0.8125rem; padding: 4px 12px; border: 1px solid var(--border); background: var(--surface);">Collapse All</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SUMMARY STATS
+         ═══════════════════════════════════════ -->
+    <div class="stats-bar">
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--total">{{TOTAL}}</div>
+        <div class="stats-bar__label">Total Tests</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--pass">{{PASSED}}</div>
+        <div class="stats-bar__label">Passed</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--fail">{{FAILED}}</div>
+        <div class="stats-bar__label">Failed</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--skip">{{SKIPPED}}</div>
+        <div class="stats-bar__label">Skipped</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--pending">{{PENDING}}</div>
+        <div class="stats-bar__label">Pending</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         TEST SECTIONS
+         ═══════════════════════════════════════ -->
+
+    <!-- Login / Auth -->
+    <div class="test-section">
+      <details open>
+        <summary>
+          Login / Auth
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>App launches successfully</span></li>
+            <li><span class="icon">⏳</span><span>Login flow works (if applicable)</span></li>
+            <li><span class="icon">⏳</span><span>Auth token persisted</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Map View -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Map View
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Map loads with current location</span></li>
+            <li><span class="icon">⏳</span><span>Pins display for nearby listings</span></li>
+            <li><span class="icon">⏳</span><span>Map zooms and pans correctly</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Navigation / Menu -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Navigation / Menu
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Tab bar visible and accessible</span></li>
+            <li><span class="icon">⏳</span><span>Tab switching works</span></li>
+            <li><span class="icon">⏳</span><span>Navigation hierarchy correct</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Listings -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Listings (List + Detail)
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Listing list view loads</span></li>
+            <li><span class="icon">⏳</span><span>Listing detail view displays correctly</span></li>
+            <li><span class="icon">⏳</span><span>Address shows city (displayAddress)</span></li>
+            <li><span class="icon">⏳</span><span>Images load</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Tasks -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Tasks
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Task list loads</span></li>
+            <li><span class="icon">⏳</span><span>Task creation works</span></li>
+            <li><span class="icon">⏳</span><span>Task completion toggles</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Contacts -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Contacts
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Contacts list loads</span></li>
+            <li><span class="icon">⏳</span><span>Contact detail view</span></li>
+            <li><span class="icon">⏳</span><span>Search works</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Chat -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Chat
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Chat tab loads</span></li>
+            <li><span class="icon">⏳</span><span>Message input field active</span></li>
+            <li><span class="icon">⏳</span><span>Messages send and display</span></li>
+            <li><span class="icon">⏳</span><span>Keyboard appears correctly</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Settings -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Settings
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Settings screen loads</span></li>
+            <li><span class="icon">⏳</span><span>Profile settings editable</span></li>
+            <li><span class="icon">⏳</span><span>Notification preferences accessible</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Notifications -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Notifications
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Push notification registration</span></li>
+            <li><span class="icon">⏳</span><span>In-app notification display</span></li>
+            <li><span class="icon">⏳</span><span>Notification tapping navigates correctly</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         BUG FINDINGS
+         ═══════════════════════════════════════ -->
+    <h2 class="mt-lg mb-md" style="font-size: 1.25rem; font-weight: 600;">🐛 Bug Findings</h2>
+
+    <div class="bug-list mb-lg">
+      <!-- Example bug item — copy and fill in -->
+      <!--
+      <div class="bug-item">
+        <span class="bug-item__severity">
+          <span class="badge badge--critical">Critical</span>
+        </span>
+        <div class="bug-item__content">
+          <h4>Bug title here</h4>
+          <p>Description of the bug, steps to reproduce, and expected vs actual behavior.</p>
+        </div>
+      </div>
+      -->
+      <p class="text-dim">No bugs found yet.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SCREENSHOTS
+         ═══════════════════════════════════════ -->
+    <h2 class="mt-lg mb-md" style="font-size: 1.25rem; font-weight: 600;">📸 Screenshots</h2>
+
+    <div class="gallery">
+      <!-- Example screenshot — copy and fill in -->
+      <!--
+      <figure class="gallery__item">
+        <img src="../assets/{{DATE}}/screenshot.png" alt="Description" loading="lazy">
+        <figcaption>Caption</figcaption>
+      </figure>
+      -->
+      <p class="text-dim">No screenshots captured yet.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ACCESSIBILITY DATA
+         ═══════════════════════════════════════ -->
+    <div class="test-section mt-lg">
+      <details>
+        <summary>
+          ♿ Accessibility Tree Data
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <p class="text-dim mb-md">Paste accessibility tree dumps here.</p>
+          <pre><code><!-- Accessibility data here --></code></pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         RAW LOGS
+         ═══════════════════════════════════════ -->
+    <div class="test-section mt-md">
+      <details>
+        <summary>
+          📋 Raw Logs
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <p class="text-dim mb-md">Paste console / simulator logs here.</p>
+          <pre><code><!-- Raw logs here --></code></pre>
+        </div>
+      </details>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Dispatch QA · <a href="https://github.com/ArchieOS-org">ArchieOS</a> · Report generated <span data-timestamp="{{ISO_DATE}}">{{DISPLAY_DATE}}</span></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

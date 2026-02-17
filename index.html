@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch QA Reports</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-title">
+        <span class="logo-icon">🧪</span>
+        <a href="/">Dispatch QA Reports</a>
+      </div>
+      <nav class="site-nav">
+        <a href="https://github.com/ArchieOS-org/dispatch-reports" target="_blank" rel="noopener">GitHub</a>
+        <a href="templates/report.html" target="_blank">Template</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-heading">
+      <h1>Test Reports</h1>
+      <p>QA reports, screenshots, and accessibility audits for the Dispatch app suite.</p>
+    </div>
+
+    <div class="report-grid">
+
+      <!-- Report Card: 2026-02-16 Simulator Test -->
+      <a href="reports/2026-02-16-sim-test.html" class="report-card">
+        <div class="report-card__header">
+          <div>
+            <div class="report-card__app">DispatchApp — Simulator Test</div>
+            <div class="report-card__date" data-timestamp="2026-02-16T19:30:00-05:00">Feb 16, 2026</div>
+          </div>
+          <span class="badge badge--in-progress">In Progress</span>
+        </div>
+        <div class="report-card__meta">
+          <span>📱 iPhone 16 Pro Simulator</span>
+          <span>🌿 <code>main</code></span>
+        </div>
+        <div class="report-card__stats">
+          <span class="stat stat--pass">✅ 3</span>
+          <span class="stat stat--fail">❌ 1</span>
+          <span class="stat stat--pending">⏳ 6</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Dispatch QA · <a href="https://github.com/ArchieOS-org">ArchieOS</a> · Built with nothing but HTML, CSS & vanilla JS</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

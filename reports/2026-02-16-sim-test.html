@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Report — DispatchApp Simulator Test — Feb 16, 2026</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-title">
+        <span class="logo-icon">🧪</span>
+        <a href="../">Dispatch QA Reports</a>
+      </div>
+      <nav class="site-nav">
+        <a href="../">← All Reports</a>
+        <a href="https://github.com/ArchieOS-org/dispatch-reports" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container container--narrow">
+
+    <!-- Report Header -->
+    <div class="report-header">
+      <h1>DispatchApp — Simulator Test <span class="badge badge--in-progress">In Progress</span></h1>
+      <div class="report-meta">
+        <div class="meta-item">
+          <dt>Date:</dt>
+          <dd data-timestamp="2026-02-16T19:30:00-05:00">Feb 16, 2026 7:30 PM ET</dd>
+        </div>
+        <div class="meta-item">
+          <dt>Device:</dt>
+          <dd>iPhone 16 Pro Simulator (iOS 18.2)</dd>
+        </div>
+        <div class="meta-item">
+          <dt>Branch:</dt>
+          <dd><code>main</code></dd>
+        </div>
+        <div class="meta-item">
+          <dt>Tester:</dt>
+          <dd>Mentat (Automated)</dd>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+      <button id="expand-all" class="badge badge--low" style="cursor:pointer; font-size: 0.8125rem; padding: 4px 12px; border: 1px solid var(--border); background: var(--surface);">Expand All</button>
+      <button id="collapse-all" class="badge badge--low" style="cursor:pointer; font-size: 0.8125rem; padding: 4px 12px; border: 1px solid var(--border); background: var(--surface);">Collapse All</button>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="stats-bar">
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--total">10</div>
+        <div class="stats-bar__label">Total Tests</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--pass">3</div>
+        <div class="stats-bar__label">Passed</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--fail">1</div>
+        <div class="stats-bar__label">Failed</div>
+      </div>
+      <div class="stats-bar__item">
+        <div class="stats-bar__number stats-bar__number--pending">6</div>
+        <div class="stats-bar__label">Pending</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         TEST SECTIONS
+         ═══════════════════════════════════════ -->
+
+    <!-- Login / Auth -->
+    <div class="test-section">
+      <details open>
+        <summary>
+          Login / Auth
+          <span class="badge badge--pass">Pass</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li>
+              <span class="icon">✅</span>
+              <span>App launches successfully in simulator</span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>Main screen loads with Voice/Chat/Settings tabs visible</span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>
+                UI renders correctly in dark mode
+                <span class="note">Dark theme active, microphone button prominent</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Map View -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Map View
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Map loads with current location</span></li>
+            <li><span class="icon">⏳</span><span>Pins display for nearby listings</span></li>
+            <li><span class="icon">⏳</span><span>Map zooms and pans correctly</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Navigation / Menu -->
+    <div class="test-section">
+      <details open>
+        <summary>
+          Navigation / Menu
+          <span class="badge badge--pass">Pass</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li>
+              <span class="icon">✅</span>
+              <span>Tab bar visible: Voice, Chat, Settings</span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>
+                Tab switching works correctly
+                <span class="note">All three tabs accessible via bottom navigation</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Listings -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Listings (List + Detail)
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Listing list view loads</span></li>
+            <li><span class="icon">⏳</span><span>Listing detail view displays correctly</span></li>
+            <li><span class="icon">⏳</span><span>Address shows city (displayAddress)</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Tasks -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Tasks
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Task list loads</span></li>
+            <li><span class="icon">⏳</span><span>Task creation works</span></li>
+            <li><span class="icon">⏳</span><span>Task completion toggles</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Contacts -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Contacts
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Contacts list loads</span></li>
+            <li><span class="icon">⏳</span><span>Contact detail view</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Chat -->
+    <div class="test-section">
+      <details open>
+        <summary>
+          Chat
+          <span class="badge badge--pass">Pass</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li>
+              <span class="icon">✅</span>
+              <span>
+                Chat tab accessible and loads
+                <span class="note">Clean chat interface with text input field</span>
+              </span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>
+                Text input field is active and keyboard appears
+                <span class="note">Tested typing — keyboard renders, input field is functional</span>
+              </span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>Chat UI layout renders correctly</span>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Settings -->
+    <div class="test-section">
+      <details open>
+        <summary>
+          Settings
+          <span class="badge badge--fail">Needs Review</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li>
+              <span class="icon">⚠️</span>
+              <span>
+                Settings screen loads but may be empty/blank
+                <span class="note">Screenshot captured — needs manual review to confirm content renders</span>
+              </span>
+            </li>
+            <li><span class="icon">⏳</span><span>Profile settings editable</span></li>
+            <li><span class="icon">⏳</span><span>Notification preferences accessible</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- Notifications -->
+    <div class="test-section">
+      <details>
+        <summary>
+          Notifications
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <ul class="checklist">
+            <li><span class="icon">⏳</span><span>Push notification registration</span></li>
+            <li><span class="icon">⏳</span><span>In-app notification display</span></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         BUG FINDINGS
+         ═══════════════════════════════════════ -->
+    <h2 class="mt-lg mb-md" style="font-size: 1.25rem; font-weight: 600;">🐛 Bug Findings</h2>
+
+    <div class="bug-list mb-lg">
+      <div class="bug-item">
+        <span class="bug-item__severity">
+          <span class="badge badge--medium">Medium</span>
+        </span>
+        <div class="bug-item__content">
+          <h4>Settings screen may render blank</h4>
+          <p>The Settings tab navigates successfully but the screen content may not be rendering. Screenshot captured for review — could be a data loading issue or empty state not implemented.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SCREENSHOTS
+         ═══════════════════════════════════════ -->
+    <h2 class="mt-lg mb-md" style="font-size: 1.25rem; font-weight: 600;">📸 Screenshots</h2>
+
+    <div class="gallery">
+      <figure class="gallery__item">
+        <img src="../assets/2026-02-16/screen_main.png" alt="Main screen — Voice tab with microphone button" loading="lazy">
+        <figcaption>Main Screen (Voice Tab)</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="../assets/2026-02-16/screen_chat.png" alt="Chat screen" loading="lazy">
+        <figcaption>Chat Screen</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="../assets/2026-02-16/screen_chat_typing.png" alt="Chat screen with keyboard visible" loading="lazy">
+        <figcaption>Chat — Keyboard Active</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="../assets/2026-02-16/screen_settings.png" alt="Settings screen" loading="lazy">
+        <figcaption>Settings Screen</figcaption>
+      </figure>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ACCESSIBILITY DATA
+         ═══════════════════════════════════════ -->
+    <div class="test-section mt-lg">
+      <details>
+        <summary>
+          ♿ Accessibility Tree Data
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <p class="text-dim mb-md">Accessibility tree dumps will be captured during the full test run.</p>
+          <pre><code><!-- Accessibility data will be inserted here --></code></pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         RAW LOGS
+         ═══════════════════════════════════════ -->
+    <div class="test-section mt-md">
+      <details>
+        <summary>
+          📋 Raw Logs
+          <span class="badge badge--skipped">Pending</span>
+        </summary>
+        <div class="test-section__body">
+          <p class="text-dim mb-md">Console and simulator logs will be captured during the full test run.</p>
+          <pre><code><!-- Raw logs will be inserted here --></code></pre>
+        </div>
+      </details>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Dispatch QA · <a href="https://github.com/ArchieOS-org">ArchieOS</a> · Report generated <span data-timestamp="2026-02-16T19:30:00-05:00">Feb 16, 2026</span></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
